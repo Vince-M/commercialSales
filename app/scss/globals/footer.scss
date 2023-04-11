@@ -1,0 +1,151 @@
+@use '../util' as *;
+
+footer {
+  min-height: rem(315);
+  background-color: var(--footerGrey);
+}
+
+.footer {
+  padding-top: rem(40);
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: rem(350);
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__branding {
+    width: 75%;
+
+    @include breakpoint-down(medium) {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: rem(25);
+    }
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    margin-bottom: rem(20);
+  }
+
+  &__contact {
+    color: var(--primaryGreyDk);
+
+    a {
+      color: var(--darkBlue);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    &--navigation {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--primaryDkBlue);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+      list-style-type: none;
+      padding-left: 0;
+
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      & li {
+        margin-bottom: rem(15);
+        
+        a {
+          color: var(--primaryDkBlue);
+        }
+      }
+
+
+
+      a:hover {
+        color: var(--white);
+      }
+    }
+
+    &--submenu {
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        margin-top: rem(8);
+
+        a {
+          color: var(--primaryDkBlue);
+
+          &:hover {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+
+.site {
+
+  &__info {
+    font-size: rem(14);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 rem(20) rem(20);
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+  }
+}
+
+.copyright {
+  font-size: rem(14);
+  margin: 0;
+
+  @include breakpoint-down(small) {
+    padding-bottom: rem(20);
+  }
+}
+
+.legal {
+
+  a {
+    color: var(--primaryDkBlue);
+  }
+
+  & a:hover {
+    color: var(--white);
+    text-decoration: underline;
+  }
+}

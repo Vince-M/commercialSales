@@ -1,0 +1,11 @@
+# Comments
+
+.DS_Store
+.DS_store
+*.zip
+*.gz
+
+none_modules/
+
+*.xd
+*.fig

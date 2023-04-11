@@ -1,0 +1,200 @@
+@use '../util' as *;
+
+.product {
+  &__cards {
+      margin: 4.6875rem auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+
+      @include breakpoint-down(medium) {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  &__card {
+      padding: rem(20) 0 rem(10);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: rem(10) rem(15) rem(10) rem(25);
+      border: 1px solid var(--primaryDkBlue);
+      height: 100%;
+      transition: background-color 300ms ease-in-out,
+                  border 300ms ease-in-out;
+
+      @include breakpoint-down(small) {
+        display: block;
+        padding-left: rem(8); // 8px
+        padding-right: rem(8); // 8px
+      }
+
+      &:hover {
+          background-color: var(--primaryLtBlue);
+          border: 1px solid var(--primaryLtBlue);
+      }
+
+      &--content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint-down(small) {
+          display: block;
+          text-align: center;
+        }
+
+          p {
+              font-size: 1.125rem; // 18px
+              line-height: 1.2;
+              font-weight: 700;
+              color: var(--primaryDkBlue);
+              margin: 0;
+          }
+      }
+
+      &--image {
+          max-width: 100%;
+          height: auto;
+          margin-right: 0.9375rem; // 15px
+
+          @include breakpoint-down(small) {
+            margin-right: 0;
+          }
+      }
+  }
+}
+
+.product__card9 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    @include breakpoint-down(medium) {
+        grid-column-start: inherit;
+        grid-column-end: inherit;
+    }
+}
+
+.product__card10 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    @include breakpoint-down(medium) {
+        grid-column-start: inherit;
+        grid-column-end: inherit;
+    }
+}
+
+
+
+// PRODUCT PAGE STYLES
+.product {
+
+    &__head {
+        font-family: var(--font-heading);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    
+        @include breakpoint-down(small) {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        font-family: var(--font-heading);
+        font-size: rem(58);
+        color: var(--primaryDkBlue);
+        text-align: center;
+        margin-bottom: 0;
+    
+        @include breakpoint-down(medium) {
+            font-size: rem(38);
+        }
+        
+        @include breakpoint-down(small) {
+            font-size: rem(38);
+        }
+
+
+    }
+
+    &__icon{
+        margin-right: 25px;
+
+        @include breakpoint-down(medium) {
+            margin: 15;
+        }
+
+        @include breakpoint-down(small) {
+            margin: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: rem(40);
+        // align-items: center;
+
+        @include breakpoint-down(small) {
+            flex-direction: column;
+        }
+
+        ul {
+
+
+            li {
+                margin-bottom: rem(30);
+            }
+        }
+
+        &--left,
+        &--right {
+            flex: 1;
+        }
+
+        &--left {
+
+            ul li:last-child {
+
+                @include breakpoint-down(small) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.productsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(40);
+
+    @include breakpoint-down(small) {
+        margin-bottom: rem(20);
+    }
+}
+
+.productImages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @include breakpoint-down(small) {
+        flex-direction: column;
+    }
+}
+
+.productImage {
+    flex: 1;
+}
