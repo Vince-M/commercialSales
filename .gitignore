@@ -9,3 +9,4 @@ none_modules/
 
 *.xd
 *.fig
+node_modules
