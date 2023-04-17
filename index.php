@@ -3,41 +3,38 @@
       <!-- HERO
       =================================================== -->
       <section class="hero feature" aria-labelledby="hero_section">
+        <div class="hero__index" style="
+          background: url(<?php the_field( 'front_page_hero' ); ?>) no-repeat;
+          background-position: top;
+          background-size: cover;" >
+                <div class="hero__index--headline">
+                  <h1 class="hero__index--headline"><?php the_field( 'front_page_header' ); ?></h1>
+                  <h4 class="hero__index--subhead"><?php the_field( 'front_page_subhead' ); ?></h4>
+                  <a href="contact.html"><button class="button btn btn--yellow">Find Out How</button></a>
 
-          <div class="hero__index" style="
-            background: url('img/HERO_index_1920x1080-min.jpg') no-repeat;
-            background-position: top;
-            background-size: cover;" >
-                  <div class="hero__index--headline">
-                    <h1 class="hero__index--headline">We're Here to Help!</h1>
-                    <h4 class="hero__index--subhead">Delivering large-scale orders to your Community.</h4>
-                    <a href="contact.html"><button class="button btn btn--yellow">Find Out How</button></a>
-
-                    <section class="header-down-arrow">
-                      <img src="img/downarrow.svg" width="50" alt="">
-                    </section> <!-- header-down-arrow -->
-                  </div>
-          </div> <!-- hero__index -->
+                  <section class="header-down-arrow">
+                    <img src="<?php echo get_theme_file_uri( 'img/downarrow.svg' ); ?>" width="50" alt="">
+                  </section> <!-- header-down-arrow -->
+                </div>
+        </div> <!-- hero__index -->
       </section> <!-- hero feature -->
       <!-- ============================================== -->
 
       <!-- BULK ORDER
       =================================================== -->
         <section class="index__bulkOrder container">
-          <h3 class="bulk__header">Taking care of your bulk order needs</h3>
-          <p class="page__intro">
-            The Commercial Sales Division at NWC offers value pricing on your large scale orders. As logistical experts in the North, we pride ourselves on delivering a huge selection of goods to remote and rural communities.
-          </p>
+          <h3 class="bulk__header"><?php the_field( 'front_page_bulk_order_intro_head' ); ?></h3>
+          <p class="page__intro"><?php the_field( 'front_page_bulk_order_intro' ); ?></p>
         </section> <!-- index__bulkOrder container -->
       <!-- ============================================== -->
 
       <!-- PRODUCTS
       =================================================== -->
-        <section class="indexProducts index__fullWidth">
+        <section class="indexProducts index__fullWidth" style="background: url(<?php the_field( 'front_page_products_img' ); ?>) no-repeat; background-position: top center; background-size: cover;">
           <div class="container index__fullWidth--text">
-            <h2 class="index__fullWidth--head">Products</h2>
-            <h5 class="index__fullWidth--subHead">From Groceries to General Merchandise.</h5>
-            <h6 class="index__fullWidth--subText">Get in touch with Commercial Sales to see what products best fit your needs</h6>
+            <h2 class="index__fullWidth--head"><?php the_field( 'front_page_products_header' ); ?></h2>
+            <h5 class="index__fullWidth--subHead"><?php the_field( 'front_page_prodcuts_subheader' ); ?></h5>
+            <h6 class="index__fullWidth--subText"><?php the_field( 'front_page_products_text' ); ?></h6>
             <a href="contact.html"><button class="button btn btn--white">Contact</button></a>
           </div> <!-- container index__fullWidth--text -->
         </section> <!-- indexProducts index__fullWidth -->

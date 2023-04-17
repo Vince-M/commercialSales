@@ -134,9 +134,9 @@
 
 
 .indexProducts {
-  background: url("../img/index_products_1920x700-min.jpg") no-repeat;
-  background-position: top;
-  background-size: cover;
+  // background: url("../img/index_products_1920x700-min.jpg") no-repeat;
+  // background-position: top;
+  // background-size: cover;
 
   @include breakpoint-down(small) {
     background-color: var(--primaryDkBlue);
