@@ -6,7 +6,7 @@
     <div class="container footer__nav">
       <div class="footer__branding">
         <div class="footer__logo">
-          <img src="img/CommercialSalesLogo_244x54.svg" alt="" width="275">
+          <a href="<?php echo site_url(); ?>"><img src="img/CommercialSalesLogo_244x54.svg" alt="Commercial Sales logo" width="275"></a>
         </div>
         <div class="footer__contact">
           <a href="tel:204-934-1471">Phone: (204) 934.1471</a><br>

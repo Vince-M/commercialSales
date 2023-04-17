@@ -126,7 +126,7 @@ body {
     color: var(--primaryDkBlue);
     margin: 0 auto rem(40);
     text-align: center;
-    width: 60%;
+    width: 80%;
 
     @include breakpoint-down(medium) {
       font-size: rem(36);
