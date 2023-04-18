@@ -13,10 +13,26 @@ add_action( 'wp_enqueue_scripts', 'commercialsales_files' );
 
 
 function commercialsales_features() {
-  add_theme_support('title-tag');
+  add_theme_support( 'title-tag' );
+  add_theme_support( 'wp-block-styles' );
+  add_theme_support( 'align-wide' );
 }
 
 add_action( 'after_setup_theme', 'commercialsales_features' );
+
+
+function commercial_theme_menus() {
+  register_nav_menus(
+    array(
+        'header-menu'  =>  'Header Menu',
+      )
+    );
+}
+
+add_action( 'init', 'commercial_theme_menus' );
+
+remove_filter( 'render_block', 'wp_render_layout_support_flag', 10, 2 );
+remove_filter( 'render_block', 'gutenberg_render_layout_support_flag', 10, 2 );
 
 
 

@@ -19,7 +19,7 @@
         <ul class="footer__menu--navigation">
           <li><a href="about.html">About</a></li>
           <li>Products
-            <ul class="footer__menu--submenu">
+            <ul class="footer__menu--sub-menu">
               <li><a href="home_furnishings.html">Home Furnishings & Appliances</a></li>
               <li><a href="#">Office Supplies & Furniture</a></li>
               <li><a href="#">Cleaning & Janitorial Supplies</a></li>

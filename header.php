@@ -32,11 +32,26 @@
                 <span></span>
                 <span></span>
             </a> <!-- nav__toggle header__menu hide-for-desktop -->
+
+            <?php
+              wp_nav_menu( array(
+                'theme_location'        =>  'header-menu',
+                'container_aria_label'  =>  '',
+                'container'             =>  false,
+                'menu_class'            =>  'menu nav__list mobileMenu hide-for-mobile',
+                'menu_id'               =>  'menu',
+                'echo'                  =>  true,
+                'fallback_cb'           =>  'wp_page_menu',
+                'before'                =>  '',
+                'after'                 =>  '',
+                'depth'                 =>  3
+              ))
+            ?>
             
-              <ul class="menu nav__list mobileMenu hide-for-mobile" role="list">
-                <li class="nav__item" role="presentation"><a role="menuitem" href="about.html">About</a></li> <!-- nav__item -->
-                <li class="nav__item has-submenu"><a tabindex="0">Products <span class="chevron-down">&#8964;</span></a>
-                  <ul class="submenu">
+              <!-- <ul class="menu nav__list mobileMenu hide-for-mobile" role="list">
+                <li class="nav__item" role="presentation"><a role="menuitem" href="about.html">About</a></li>
+                <li class="nav__item has-sub-menu"><a tabindex="0">Products <span class="chevron-down">&#8964;</span></a>
+                  <ul class="sub-menu">
                     <li class="subitem"><a role="menuitem" href="home_furnishings.html">Home Furnishings & Appliances</a></li>
                     <li class="subitem"><a role="menuitem" href="#">Office Supplies & Furniture</a></li>
                     <li class="subitem"><a role="menuitem" href="#">Cleaning & Janitorial Supplies</a></li>
@@ -47,10 +62,10 @@
                     <li class="subitem"><a role="menuitem" href="#">Transportation Vehicles</a></li>
                     <li class="subitem"><a role="menuitem" href="#">Community Events & Fireworks</a></li>
                   </ul>
-                </li> <!-- nav__item has-submenu -->
+                </li> 
 
                 <button class="nav__item--btn"><a class="button btn btn--dark" href="contact.html" role="button">Contact</a></button>
-              </ul> <!-- nav__list header__links hide-for-mobile mobileMenu -->
+              </ul> -->
 
         </nav> <!-- nav -->
       </div> <!-- container header__section -->

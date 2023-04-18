@@ -110,3 +110,26 @@ button .button {
       margin-left: 0px;
   }
 }
+
+button.btn.btn--dark a {
+  background-color: var(--primaryDkBlue);
+    border: rem(1) solid var(--primaryDkBlue);
+    color: var(--white);
+    font-weight: 700;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--white);
+      color: var(--primaryDkBlue);
+      border: rem(1) solid var(--primaryDkBlue); // 1px
+      transition: all 300ms ease-in-out;
+  }
+}
+
+// .nav__item--btn a {
+//   background-color: var(--primaryDkBlue);
+//   border: rem(1) solid var(--primaryDkBlue);
+//   color: var(--white);
+//   font-weight: 700;
+// }
