@@ -115,6 +115,12 @@
       overflow: visible;
     }
 
+    &--innerWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     &--image {
         // background-repeat: no-repeat;
         // background-position: center top;
@@ -159,11 +165,19 @@
   }
 }
 
+.innerColumn__text {
+  margin-left: rem(60);
+
+  @include breakpoint-down(small) {
+    margin-left: 0;
+  }
+}
+
 .customers {
 
   &__map {
     // margin: 0;
-    background-image: url(../img/customers_map_1200x400-min.jpg);
+    background-image: url(./img/customers_map_1200x400-min.jpg);
     min-height: rem(400);
     background-repeat: none;
     background-position: center center;

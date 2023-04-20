@@ -176,7 +176,8 @@ header {
                   border-color .4s ease-out;
     }
     
-    &__item a:hover {
+    &__item a:hover,
+    .chevron:hover {
       color: var(--white);
       text-decoration: none;
     }
@@ -191,6 +192,8 @@ header {
         text-transform: none;
     }
 }
+
+
 
 
 .sub-menu {

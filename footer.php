@@ -6,8 +6,9 @@
     <div class="container footer__nav">
       <div class="footer__branding">
         <div class="footer__logo">
-          <a href="<?php echo site_url(); ?>"><img src="img/CommercialSalesLogo_244x54.svg" alt="Commercial Sales logo" width="275"></a>
-        </div>
+        <a href="<?php echo site_url(); ?>">
+              <img src="<?php echo get_theme_file_uri() ?>/img/CommercialSalesLogo_244x54.svg" alt="Commercial Sales logo" width="225">
+            </a>        </div>
         <div class="footer__contact">
           <a href="tel:204-934-1471">Phone: (204) 934.1471</a><br>
           <a href="fax:204-934-1685">Fax Order: (204) 934.1685</a><br>
@@ -40,10 +41,10 @@
     <div class="container">
       <div class="site__info">
         <div>
-          <p class="copyright">Copyright © 2021 The North West Company</p>
+          <p class="copyright">&copy; <?php echo date( 'Y' ); ?> The North West Company</p>
         </div>
         <div class="legal">
-          <a href="#" target="_blank">Privacy</a> | <a href="#" target="_blank">Terms & Conditions</a>
+        <a href="https://www.northwest.ca/legal-privacy" target="_blank">Legal / Privacy</a> | <a href="https://www.northwest.ca/terms-and-conditions" target="_blank">Terms & Conditions</a>
         </div>
       </div>
     </div>
