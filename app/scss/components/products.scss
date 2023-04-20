@@ -46,7 +46,8 @@
         }
 
           p {
-              font-size: 1.125rem; // 18px
+              font-size: rem(18); // 18px
+              text-transform: lowercase;
               line-height: 1.2;
               font-weight: 700;
               color: var(--primaryDkBlue);

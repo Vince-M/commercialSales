@@ -44,106 +44,40 @@
 =================================================== -->
   <section class="product__cards container" aria-labelledby="product_cards">
     
-    <a href="home_furnishings.html">
-      <div class="product__card product__card1">
-        <div class="product__card--content">
-            <div class="product__card--image">
-                <img src="img/icon_homeFurnishings_82x69.svg" alt="Products - Home Furnishings and Appliances" width="82" height="69">
-            </div>
-            <p>home furnishings & appliances</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
+    <?php
+      $productCards = new WP_Query(array(
+        'posts_per_page'    =>  -1,
+        'post_type'         =>  'product',
+        'order'             =>  'ASC'
 
-    <a href="#">
-      <div class="product__card product__card2">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_officeSupplies_82x69.svg" alt="Products - Office Supplies and Furniture" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>office supplies & furniture</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
+      ));
 
-    <a href="#">
-      <div class="product__card product__card3">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_cleaningVaccum_82x69.svg" alt="Products - Cleaning and Janitorial Supplies" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>cleaning & janitorial supplies</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
+      while($productCards->have_posts()) {
+        $productCards->the_post(); ?>
 
-    <a href="#">
-      <div class="product__card product__card4">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_schoolBook_82x69.svg" alt="Products - School Supplies and Sporting Equipment" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>school supplies & sporting equipment</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
+        <a href="<?php the_permalink(); ?>">
+          <div class="product__card product__card1">
+            <div class="product__card--content">
+                <div class="product__card--image">
+                <?php 
+                  $image = get_field('product_image');
+                  if( !empty( $image ) ): ?>
+                      <img src="<?php echo esc_url($image['url']); ?>" width="82" height="69" alt="<?php echo esc_attr($image['alt']); ?>" />
+                  <?php endif; 
+                  ?>
 
-    <a href="#">
-      <div class="product__card product__card5">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_housewaresPot_82x69.svg" alt="Products - Housewares" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>housewares</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
+                </div>
+                <p><?php the_title(); ?></p>
+            </div> <!-- product__card--content -->
+          </div> <!-- product__card -->
+        </a>
+    
+      <?php }
+    ?>
 
-    <a href="#">
-      <div class="product__card product__card6">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_lumberSaw_82x69.svg" alt="Products - Lumber and Building Supplies" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>lumber & building supplies</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
+    
 
-    <a href="#">
-      <div class="product__card product__card7">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_bulkOrderFoods_82x69.svg" alt="Products - Bulk Food Orders" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>bulk food orders</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
-
-    <a href="#">
-      <div class="product__card product__card8">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_transportationSUV_82x69.svg" alt="Products - Transportation" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>transportation vehicles</p>
-        </div> <!-- product__card--content -->
-      </div> <!-- product__card -->
-    </a>
-
-
-
-    <a href="#" class="product__card9">
-      <div class="product__card">
-        <div class="product__card--content">
-          <div class="product__card--image">
-            <img src="img/icon_fireworks_82x69.svg" alt="Products - Community Events and Fireworks" width="82" height="69">
-          </div> <!-- product__card--image -->
-          <p>community events & fireworks</p>
-        </div> <!-- product__card--content -->
-      </div><!-- product__card -->
-    </a>
+   
   </section> <!-- product__cards container -->
 <!-- ============================================== -->
 
