@@ -104,6 +104,10 @@
             flex-direction: column;
             padding: 0;
         }
+
+        h2 {
+            margin-bottom: 0;
+        }
     }
 
     &__heading {
@@ -121,6 +125,9 @@
             font-size: rem(38);
         }
 
+        &--icon {
+            margin-right: rem(20);
+        }
 
     }
 
