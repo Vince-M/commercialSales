@@ -153,6 +153,7 @@
 
         @include breakpoint-down(small) {
             flex-direction: column;
+            padding: 0;
         }
 
         ul {
@@ -177,6 +178,10 @@
                 }
             }
         }
+    }
+
+    &__header {
+        text-align: center;
     }
 }
 
