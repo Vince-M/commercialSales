@@ -40,7 +40,7 @@
       </div>
     </section> <!-- pageIntro -->
 
-        <div class="container row">
+        <div>
           <?php the_content(); ?>
 
           <?php endwhile; else: ?>
