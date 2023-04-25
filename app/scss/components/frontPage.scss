@@ -1,7 +1,11 @@
 @use '../util' as *;
 
+
 .hero {
   &__index {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,8 +13,6 @@
     align-items: center;
     text-align: center;
     min-height: 100vh;
-    // left: 50%;
-    // transform: translateX(-50%);
     margin: 0;
     overflow: hidden;
     padding: 0;

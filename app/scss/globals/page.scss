@@ -57,6 +57,22 @@
   }
 }
 
+.page-banner__bg-image {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  left: 51%;
+  transform: translateX(-51%);
+  padding: 0;
+  position: relative;
+  margin: 0;
+  height: rem(450);
+
+  @include breakpoint-down(small) {
+    background-position: center center;
+  }
+}
+
 .pageIntro {
   padding-bottom: rem(40);
 }

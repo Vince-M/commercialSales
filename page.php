@@ -2,19 +2,8 @@
 
     <!-- HERO
     =================================================== -->
-      <section class="hero__pages" role="banner" data-type="background" data-speed="2">
-        <div style="background: url(<?php the_field( 'hero_page' ); ?>) 
-              no-repeat; 
-              background-position: top; 
-              background-size: cover; 
-              left: 51%; padding: 0; 
-              position: relative; 
-                -webkit-transform: translateX(-51%); 
-              transform: translateX(-51%); 
-              margin-top: 0px; 
-              margin-bottom: 0px;  
-              height: 450px;">
-          </div>
+    <section class="hero__pages" role="banner" data-type="background" data-speed="2">
+        <?php pageBanner(); ?>
       </section> <!-- hero__pages -->
     <!-- ============================================== -->
 

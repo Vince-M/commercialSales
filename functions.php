@@ -1,5 +1,14 @@
 <?php
 
+function pageBanner() {
+  // php logic will live here
+  ?>
+    <div class="page-banner">
+      <div class="page-banner__bg-image" style="background-image: url(<?php the_field( 'hero_page' ); ?>)"></div>
+    </div>
+  <?php 
+}
+
 function commercialsales_files() {
   wp_enqueue_script('commercialsales_main', get_theme_file_uri('/dist/script.js'), NULL, '1.0', true);
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Georama:wght@400;700;900&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');

@@ -4,9 +4,7 @@
 =================================================== -->
 <section class="hero feature" aria-labelledby="hero_section">
   <div class="hero__index" style="
-    background: url(<?php the_field( 'front_page_hero' ); ?>) no-repeat;
-    background-position: top;
-    background-size: cover;" >
+    background-image: url(<?php the_field( 'front_page_hero' ); ?>);" >
           <div class="hero__index--headline">
             <h1 class="hero__index--headline"><?php the_field( 'front_page_header' ); ?></h1>
             <h4 class="hero__index--subhead"><?php the_field( 'front_page_subhead' ); ?></h4>
