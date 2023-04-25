@@ -51,31 +51,13 @@
       ));
 
       while($productCards->have_posts()) {
-        $productCards->the_post(); ?>
+        $productCards->the_post(); 
 
-        <a href="<?php the_permalink(); ?>">
-          <div class="product__card product__card1">
-            <div class="product__card--content">
-                <div class="product__card--image">
-                <?php 
-                  $image = get_field('product_image');
-                  if( !empty( $image ) ): ?>
-                      <img src="<?php echo esc_url($image['url']); ?>" width="82" height="69" alt="<?php echo esc_attr($image['alt']); ?>" />
-                  <?php endif; 
-                  ?>
+        get_template_part( 'template-parts/card', 'links' );
 
-                </div>
-                <p><?php the_title(); ?></p>
-            </div> <!-- product__card--content -->
-          </div> <!-- product__card -->
-        </a>
-    
-      <?php }
+       }
     ?>
 
-    
-
-   
   </section> <!-- product__cards container -->
 <!-- ============================================== -->
 
@@ -114,12 +96,7 @@
 
 <!-- CTA SECTION
 =================================================== -->
-  <section class="cta">
-    <div class="cta__text container row">
-      <h3 class="cta__pullBanner">Learn how Commercial Sales can be the perfect choice for all your community requirements.</h3>
-      <a href="contact.html"><button class="button btn btn--white">Get in Touch</button></a>
-    </div>
-  </section>
+<?php get_template_part( 'template-parts/cta' ); ?>
 <!-- ============================================== -->
 
 <!-- WAREHOUSE

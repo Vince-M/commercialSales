@@ -2,7 +2,7 @@
 
 .product {
   &__cards {
-      margin: 4.6875rem auto;
+      margin: 0 auto rem(75);
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem;

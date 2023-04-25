@@ -95,11 +95,10 @@ body {
     color: var(--primaryDkBlue);
     margin: 0 auto rem(40);
     text-align: center;
-    width: 80%;
+    width: 100%;
 
     @include breakpoint-down(medium) {
       font-size: rem(36);
-      width: 100%;
     }
 
     @include breakpoint-down(small) {

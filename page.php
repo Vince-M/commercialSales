@@ -25,9 +25,29 @@
         <p>Sorry, no pages found</p>
 
         <?php endif; ?>
-      <!-- ============================================== -->
 
       </section> <!-- pageIntro -->
+
+      <section class="product__cards container" aria-labelledby="product_cards">
+      
+        <?php
+          $productCards = new WP_Query(array(
+            'posts_per_page'    =>  -1,
+            'post_type'         =>  'product',
+            'order'             =>  'ASC'
+
+          ));
+
+          while($productCards->have_posts()) {
+            $productCards->the_post(); 
+
+            get_template_part( 'template-parts/card', 'links' );
+
+           }
+        ?>
+        
+      </section> <!-- product__cards container -->
+
     <!-- ============================================== -->
 
 <?php get_footer(); ?>

@@ -13,10 +13,10 @@
         <div class="page__headBkgd">
           <h1 class="page__heading container">Commercial Sales Products</h1>
         </div>
-    <!-- ============================================== -->
+      <!-- ============================================== -->
 
-    <!-- CONTENT
-    =================================================== -->
+      <!-- CONTENT
+      =================================================== -->
 
       <div class="container row product__head">
       
@@ -39,11 +39,33 @@
           <?php endif; ?>
         </div>
 
-      </div>
-        
-      <!-- ============================================== -->
 
       </section> <!-- pageIntro -->
+
+      <section class="product__cards container" aria-labelledby="product_cards">
+      
+      <?php
+        $productCards = new WP_Query(array(
+          'posts_per_page'    =>  -1,
+          'post_type'         =>  'product',
+          'order'             =>  'ASC'
+
+        ));
+
+        while($productCards->have_posts()) {
+          $productCards->the_post(); 
+
+          get_template_part( 'template-parts/card', 'links' );
+
+         }
+      ?>
+      
+    </section> <!-- product__cards container -->
+
+    <!-- CTA SECTION
+    =================================================== -->
+    <?php get_template_part( 'template-parts/cta' ); ?>
+    <!-- ============================================== -->
     <!-- ============================================== -->
 
 <?php get_footer(); ?>
