@@ -8,7 +8,7 @@
           <div class="hero__index--headline">
             <h1 class="hero__index--headline"><?php the_field( 'front_page_header' ); ?></h1>
             <h4 class="hero__index--subhead"><?php the_field( 'front_page_subhead' ); ?></h4>
-            <a href="contact.html"><button class="button btn btn--yellow">Find Out How</button></a>
+            <a href="<?php echo site_url( 'contact' ); ?>"><button class="button btn btn--yellow">Find Out How</button></a>
 
             <section class="header-down-arrow">
               <img src="<?php echo get_theme_file_uri( 'img/downarrow.svg' ); ?>" width="50" alt="">
@@ -33,7 +33,7 @@
       <h2 class="index__fullWidth--head"><?php the_field( 'front_page_products_header' ); ?></h2>
       <h5 class="index__fullWidth--subHead"><?php the_field( 'front_page_prodcuts_subheader' ); ?></h5>
       <h6 class="index__fullWidth--subText"><?php the_field( 'front_page_products_text' ); ?></h6>
-      <a href="contact.html"><button class="button btn btn--white">Contact</button></a>
+      <a href="<?php echo site_url( 'contact' ); ?>"><button class="button btn btn--white">Contact</button></a>
     </div> <!-- container index__fullWidth--text -->
   </section> <!-- indexProducts index__fullWidth -->
 <!-- ============================================== -->
@@ -69,7 +69,7 @@
         <h2 class="indexSolutions__head">Solutions</h2>
         <h5 class="indexSolutions__subHead">300+ years of experience shipping products to the north.</h5>
         <h6 class="indexSolutions__subText">Reach out to the Commercial Sales team, see what solution would be most suitable for you.</h6>
-        <button class="button btn btn--dark"><a href="contact.html" class="btn__contact">Contact</a></button>
+        <button class="button btn btn--dark"><a href="<?php echo site_url( 'contact' ); ?>" class="btn__contact">Contact</a></button>
       </div> <!-- ourCustomers__pullOut--text -->
       <div class="indexSolutions__background"></div> <!-- ourCustomers__pullOut -->
     </div><!-- solutionsText -->
