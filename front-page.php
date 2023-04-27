@@ -58,6 +58,8 @@
        }
     ?>
 
+    <?php wp_reset_postdata() ?>
+
   </section> <!-- product__cards container -->
 <!-- ============================================== -->
 
@@ -78,17 +80,27 @@
 
 <!-- TRANSPORT
 =================================================== -->
-  <section class="transport container row">
+<section class="transport container row">
     <div class="air">
       <figure>
-        <img src="img/transport_air_600x400-min.jpg" alt="" width="600">
-        <figcaption class="transport__caption">During the spring and summer months, we transport our goods by air and also sealift.</figcaption>
+        <?php 
+          $image = get_field('air_transport_img');
+          if( !empty( $image ) ): ?>
+              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+          <?php endif; 
+        ?>
+        <figcaption class="transport__caption"><?php the_field( 'air_transport_text' ); ?></figcaption>
       </figure>
     </div>
     <div class="iceRoad">
-      <figure>
-        <img src="img/transport_iceRoad_600x400-min.jpg" alt="" width="600">
-        <figcaption class="transport__caption">For reliable delivery of items during winter, we use a combination of air shipping and ice roads transportation.</figcaption>
+    <figure>
+        <?php 
+          $image = get_field('iceroad_transport_img');
+          if( !empty( $image ) ): ?>
+              <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+          <?php endif; 
+        ?>
+        <figcaption class="transport__caption"><?php the_field( 'iceroad_text' ); ?></figcaption>
       </figure>
     </div>
   </section>
