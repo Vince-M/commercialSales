@@ -1,5 +1,21 @@
 @use '../util' as *;
 
+.productCardHead {
+    text-align: center;
+    max-width: rem(1000);
+
+    h3 {
+        font-size: rem(38);
+        color: var(--dkGray);
+    }
+
+    h5 {
+        color: var(--textGrey);
+        width: 80%;
+        margin: 0 auto rem(50);
+    }
+}
+
 .product {
   &__cards {
       margin: 0 auto rem(75);
@@ -106,7 +122,7 @@
         }
 
         h2 {
-            margin-bottom: 0;
+            margin-bottom: rem(15);
         }
     }
 
@@ -167,6 +183,8 @@
         &--left,
         &--right {
             flex: 1;
+            display: flex;
+            justify-content: center;
         }
 
         &--left {

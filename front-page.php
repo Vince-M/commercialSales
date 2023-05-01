@@ -40,8 +40,11 @@
 
 <!-- PRODUCT GRID
 =================================================== -->
+  <div class="productCardHead container row">
+    <h3>We offer quality products, at wholesale prices!</h3>
+    <h5>Our team of dedicated individuals are here to help source, procure and ship your requirements into communities across Northern Canada, year round!</h5>
+  </div>
   <section class="product__cards container" aria-labelledby="product_cards">
-    
     <?php
       $productCards = new WP_Query(array(
         'posts_per_page'    =>  -1,
