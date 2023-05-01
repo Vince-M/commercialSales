@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+<meta charset="<?php bloginfo('charset'); ?>">
 <head>
-  <meta charset="<?php bloginfo('charset'); ?>">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/favicon.ico">
 
   <?php wp_head(); ?>
@@ -19,15 +17,15 @@
     <header class="header masthead">
       <div class="overlay has-fade"></div>
       
-      <div class="container header__section row">
-        <nav class="nav" aria-label="Site">
+      <div class="container header__section">
+        <nav class="nav" role="navigation" aria-label="Main Navigation">
           <div class="header__logo site-branding">
             <a href="<?php echo site_url(); ?>">
               <img src="<?php echo get_theme_file_uri() ?>/img/CommercialSalesLogo_244x54_rev.svg" alt="Commercial Sales logo" width="225">
             </a>
           </div> <!-- header__logo -->
             
-            <a id="btnHamburger" class="nav__toggle header__menu hide-for-desktop" href="#">
+            <a id="btnHamburger" class="nav__toggle header__menu hide-for-desktop" aria-hidden="true">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,13 +36,14 @@
                 'theme_location'        =>  'header-menu',
                 'container_aria_label'  =>  '',
                 'container'             =>  false,
+                'container_aria_label'  =>  '',
                 'menu_class'            =>  'menu nav__list mobileMenu hide-for-mobile',
                 'menu_id'               =>  'menu',
                 'echo'                  =>  true,
                 'fallback_cb'           =>  'wp_page_menu',
                 'before'                =>  '',
                 'after'                 =>  '',
-                'depth'                 =>  3
+                'depth'                 =>  2
               ))
             ?>
             
