@@ -4,6 +4,10 @@
     text-align: center;
     max-width: rem(1000);
 
+    @include breakpoint-down(small) {
+        width: 100%;
+    }
+
     h3 {
         font-size: rem(38);
         color: var(--dkGray);
@@ -13,6 +17,10 @@
         color: var(--textGrey);
         width: 80%;
         margin: 0 auto rem(50);
+
+        @include breakpoint-down(small) {
+            width: 100%;
+        }
     }
 }
 
@@ -184,7 +192,7 @@
         &--right {
             flex: 1;
             display: flex;
-            justify-content: center;
+            justify-content: start;
         }
 
         &--left {

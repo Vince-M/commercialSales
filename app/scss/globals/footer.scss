@@ -80,13 +80,11 @@ footer {
         
         a {
           color: var(--primaryDkBlue);
+
+          &:hover {
+            color: var(--white);
+          }
         }
-      }
-
-
-
-      a:hover {
-        color: var(--white);
       }
     }
 
