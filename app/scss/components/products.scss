@@ -10,13 +10,13 @@
 
     h3 {
         font-size: rem(38);
-        color: var(--dkGray);
+        color: var(--primaryDkBlue);
     }
 
     h5 {
         color: var(--textGrey);
         width: 80%;
-        margin: 0 auto rem(50);
+        margin: 0 auto rem(40);
 
         @include breakpoint-down(small) {
             width: 100%;
