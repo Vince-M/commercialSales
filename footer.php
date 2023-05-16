@@ -21,15 +21,18 @@
           <li><a href="<?php echo site_url( 'about' ); ?>">About</a></li>
           <li>Products
             <ul class="footer__menu--sub-menu">
-              <li><a href="<?php echo site_url( '/home-furnishings-appliances' ); ?>">Home Furnishings & Appliances</a></li>
-              <li><a href="<?php echo site_url( '/office-supplies-furniture' ); ?>">Office Supplies & Furniture</a></li>
+              <li><a href="<?php echo site_url( '/bulk-food-orders' ); ?>">Bulk Food Orders</a></li>
               <li><a href="<?php echo site_url( '/cleaning-janitorial-supplies' ); ?>">Cleaning & Janitorial Supplies</a></li>
-              <li><a href="<?php echo site_url( '/school-supplies-sporting-equipment' ); ?>">School Supplies & Sporting Equipment</a></li>
-              <li><a href="<?php echo site_url( '//housewares' ); ?>">Housewares</a></li>
-              <li><a href="<?php echo site_url( '//lumber-building-supplies' ); ?>">Lumber & Building Supplies</a></li>
-              <li><a href="<?php echo site_url( '/bulk-food-orders' ); ?>">Bulk Food Orders</li>
-              <li><a href="<?php echo site_url( '/transportation-vehicles' ); ?>">Transportation Vehicles</a></li>
               <li><a href="<?php echo site_url( '/community-events-fireworks' ); ?>">Community Events & Fireworks</a></li>
+              <li><a href="<?php echo site_url( '/community-events-fireworks' ); ?>">Emergency Response</a></li>
+              <li><a href="<?php echo site_url( '/community-events-fireworks' ); ?>">Everyday Apparel & Workwear</a></li>
+              <li><a href="<?php echo site_url( '/home-furnishings-appliances' ); ?>">Home Furnishings & Appliances</a></li>
+              <li><a href="<?php echo site_url( '/housewares' ); ?>">Housewares</a></li>
+              <li><a href="<?php echo site_url( '/lumber-building-supplies' ); ?>">Lumber & Building Supplies</a></li>
+              <li><a href="<?php echo site_url( '/office-supplies-furniture' ); ?>">Office Supplies & Furniture</a></li>
+              <li><a href="<?php echo site_url( '/school-supplies-sporting-equipment' ); ?>">School Supplies</a></li>
+              <li><a href="<?php echo site_url( '/school-supplies-sporting-equipment' ); ?>">Sports & Recreation</a></li>
+              <li><a href="<?php echo site_url( '/transportation-vehicles' ); ?>">Transportation Vehicles</a></li>
             </ul>
           </li>
           <button class="footer__item--btn button btn btn--dark"><a class="btn__contact" href="<?php echo site_url( 'contact' ); ?>">Contact</a></button>
