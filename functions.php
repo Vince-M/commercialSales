@@ -13,6 +13,7 @@ function commercialsales_files() {
   wp_enqueue_script('commercialsales_main', get_theme_file_uri('/dist/script.js'), NULL, '1.0', true);
   wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css2?family=Georama:wght@400;700;900&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swa', [], null);
   wp_enqueue_style('commercialsales_main_styles',get_theme_file_uri('main.css'));
+  wp_enqueue_style('commercialsales_style',get_theme_file_uri('style.css'));
 }
 
 add_action( 'wp_enqueue_scripts', 'commercialsales_files' );
