@@ -118,7 +118,7 @@ header {
   &__item {
       
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(medium) {
       margin-top: rem(20);
     }
 
@@ -135,12 +135,13 @@ header {
                   display: flex;
                   flex-direction: column;
                   min-width: rem(250);
-                  position: absolute;
-                  left: 98%;
-                  transform: translateX(-100%);
+                  // position: absolute;
+                  // left: 98%;
+                  // transform: translateX(-100%);
                   margin-top: rem(35);
                   list-style-type: none;
                   padding-top: rem(5);
+                  margin: rem(35) auto 0;
               }
           }
       }
