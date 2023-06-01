@@ -23,7 +23,7 @@
     <header class="header masthead">
       <div class="overlay has-fade"></div>
       
-      <div class="container header__section">
+      <div class="container row header__section">
         <nav class="nav" role="navigation" aria-label="Main Navigation">
           <div class="header__logo site-branding">
             <a href="<?php echo site_url(); ?>">

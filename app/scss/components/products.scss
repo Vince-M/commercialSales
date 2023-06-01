@@ -18,7 +18,7 @@
         width: 80%;
         margin: 0 auto rem(40);
 
-        @include breakpoint-down(small) {
+        @include breakpoint-down(medium) {
             width: 100%;
         }
     }
