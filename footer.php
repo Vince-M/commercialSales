@@ -29,10 +29,10 @@
               <li><a href="<?php echo site_url( '/home-furnishings-appliances' ); ?>">Home Furnishings & Appliances</a></li>
               <li><a href="<?php echo site_url( '/housewares' ); ?>">Housewares</a></li>
               <li><a href="<?php echo site_url( '/lumber-building-supplies' ); ?>">Lumber & Building Supplies</a></li>
+              <li><a href="<?php echo site_url( '/motorized-marine' ); ?>">Motorized & Marine</a></li>
               <li><a href="<?php echo site_url( '/office-supplies-furniture' ); ?>">Office Supplies & Furniture</a></li>
               <li><a href="<?php echo site_url( '/school-supplies-sporting-equipment' ); ?>">School Supplies</a></li>
               <li><a href="<?php echo site_url( '/sports-recreation' ); ?>">Sports & Recreation</a></li>
-              <li><a href="<?php echo site_url( '/transportation-vehicles' ); ?>">Transportation Vehicles</a></li>
             </ul>
           </li>
           <button class="footer__item--btn button btn btn--dark"><a class="btn__contact" href="<?php echo site_url( 'contact' ); ?>">Contact</a></button>
